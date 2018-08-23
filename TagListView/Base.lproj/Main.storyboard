@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tag ListVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TagListVC" customModule="TagListView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDW-Sp-GPo">
+                                <rect key="frame" x="16" y="141" width="343" height="55"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="47N-f6-YP1">
+                                        <rect key="frame" x="8" y="10" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="In0-TY-ylb"/>
+                                            <constraint firstAttribute="width" secondItem="47N-f6-YP1" secondAttribute="height" multiplier="1:1" id="g31-oa-2u3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxD-ll-yAT">
+                                        <rect key="frame" x="51" y="5.5" width="287" height="44"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfu-a8-6xJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taM-3Z-loa" customClass="SearchTextField" customModule="SearchTextField">
+                                                        <rect key="frame" x="8" y="5" width="200" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="XQA-fW-jdK"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="CTK-y5-sNI"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="taM-3Z-loa" firstAttribute="leading" secondItem="xfu-a8-6xJ" secondAttribute="leading" constant="8" id="BhQ-vl-dqQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="taM-3Z-loa" secondAttribute="bottom" constant="5" id="Kmp-cN-Tgn"/>
+                                                    <constraint firstAttribute="width" constant="230" id="cY1-BB-b45"/>
+                                                    <constraint firstItem="taM-3Z-loa" firstAttribute="top" secondItem="xfu-a8-6xJ" secondAttribute="top" constant="5" id="zrT-C2-wog"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xfu-a8-6xJ" firstAttribute="top" secondItem="DxD-ll-yAT" secondAttribute="top" id="5kw-xo-brx"/>
+                                            <constraint firstAttribute="trailing" secondItem="xfu-a8-6xJ" secondAttribute="trailing" id="D9j-dE-mZV"/>
+                                            <constraint firstItem="xfu-a8-6xJ" firstAttribute="leading" secondItem="DxD-ll-yAT" secondAttribute="leading" id="Kcm-c5-vCk"/>
+                                            <constraint firstAttribute="bottom" secondItem="xfu-a8-6xJ" secondAttribute="bottom" id="ShR-ro-gLc"/>
+                                            <constraint firstAttribute="height" constant="44" id="jfB-3h-ghW"/>
+                                            <constraint firstItem="xfu-a8-6xJ" firstAttribute="height" secondItem="DxD-ll-yAT" secondAttribute="height" id="wTf-vT-Der"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="47N-f6-YP1" firstAttribute="leading" secondItem="iDW-Sp-GPo" secondAttribute="leading" constant="8" id="3BT-i7-E88"/>
+                                    <constraint firstAttribute="height" constant="55" id="6K4-ET-wRu"/>
+                                    <constraint firstItem="DxD-ll-yAT" firstAttribute="centerY" secondItem="iDW-Sp-GPo" secondAttribute="centerY" id="Ahj-sz-USO"/>
+                                    <constraint firstAttribute="trailing" secondItem="DxD-ll-yAT" secondAttribute="trailing" constant="5" id="kW3-Cx-XgX"/>
+                                    <constraint firstItem="DxD-ll-yAT" firstAttribute="leading" secondItem="47N-f6-YP1" secondAttribute="trailing" constant="8" id="qkI-Qu-2bq"/>
+                                    <constraint firstItem="47N-f6-YP1" firstAttribute="centerY" secondItem="iDW-Sp-GPo" secondAttribute="centerY" id="rxV-py-GIf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="self.layer.borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag Views and Search Text Field" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD5-yF-arV">
+                                <rect key="frame" x="16" y="70" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD5-yF-arV" secondAttribute="trailing" constant="16" id="Atc-vQ-vjA"/>
+                            <constraint firstItem="LD5-yF-arV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="SoC-KL-iMk"/>
+                            <constraint firstItem="iDW-Sp-GPo" firstAttribute="top" secondItem="LD5-yF-arV" secondAttribute="bottom" constant="50" id="Sts-kT-xC8"/>
+                            <constraint firstItem="iDW-Sp-GPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YYz-O1-w2F"/>
+                            <constraint firstItem="LD5-yF-arV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d94-7a-6BW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iDW-Sp-GPo" secondAttribute="trailing" constant="16" id="sBw-B7-nxw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="xfu-a8-6xJ" id="9F3-gG-su3"/>
+                        <outlet property="contentViewWidthConstraint" destination="cY1-BB-b45" id="m7K-Xr-I10"/>
+                        <outlet property="searchTextField" destination="taM-3Z-loa" id="sTS-en-Uxt"/>
+                        <outlet property="searchTextFieldLeadingConstraint" destination="BhQ-vl-dqQ" id="Qs5-Vz-8d2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_search" width="50" height="50"/>
+    </resources>
+</document>
